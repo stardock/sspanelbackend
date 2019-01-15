@@ -26,7 +26,7 @@ pip install -r requirements.txt
 cp apiconfig.py userapiconfig.py  
 cp config.json user-config.json  
 ```  
-  * 该版本现已支持chain-f  
+该版本现已支持chain-f  
 
 ## 后端配置  
 
@@ -43,9 +43,10 @@ cp config.json user-config.json
     MYSQL_USER = 'ss'  
     MYSQL_PASS = 'ss'  
     MYSQL_DB = 'shadowsocks'  
-    MYSQL_UPDATE_TIME = 60  
-    glzjinmod即为公用数据库模式  
+    MYSQL_UPDATE_TIME = 60       
     ```   
+    glzjinmod即为公用数据库模式  
+    
 
    * API接口方式  
    ```  
@@ -64,7 +65,7 @@ cp config.json user-config.json
   测试一下，应该就可以用看到相应用户数据了。  
   ctrl + c退出即可  
 
-
+## 添加守护进程自动运行
 
 
 
