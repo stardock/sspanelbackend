@@ -103,7 +103,7 @@ systemctl start supervisord
 systemctl enable supervisord  
 ```  
 
-* 查询否成功
+* 查询是否成功  
 `supervisorctl status mu`  
   * 如下显示说明成功  
   `mu                               RUNNING   pid 3254, uptime 4 days, 0:42:33`  
