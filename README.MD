@@ -97,4 +97,15 @@ logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO
 ;logfile_backups=10 ; # of logfile backups (default 10)  
 ```  
 
+* 执行如下代码启动守护进程  
+```  
+systemctl start supervisord  
+systemctl enable supervisord  
+```  
+
+* 查询否成功
+`supervisorctl status mu`  
+  * 如下显示说明成功  
+  `mu                               RUNNING   pid 3254, uptime 4 days, 0:42:33`  
+  
 
