@@ -65,7 +65,36 @@ cp config.json user-config.json
   测试一下，应该就可以用看到相应用户数据了。  
   ctrl + c退出即可  
 
-## 添加守护进程自动运行
+## 添加守护进程自动运行  
 
+* 安装必备软件  
+```  
+pip install --upgrade pip
+yum install epel-release -y
+yum isntall supervisord -y
+```  
+
+* 修改 `/etc/supervisord.conf` 添加如下内容  
+```  
+[inet_http_server]  
+port = 127.0.0.1:9001  
+
+[rpcinterface:supervisor]  
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface  
+
+[program:mu]  
+command=python /root/shadowsocks/server.py  
+directory=/root/shadowsocks  
+autorestart=true  
+startsecs=10  
+startretries=36  
+redirect_stderr=true  
+user=root ; setuid to this UNIX account to run the program  
+log_stdout=true ; if true, log program stdout (default true)  
+log_stderr=true ; if true, log program stderr (def false)  
+logfile=/var/log/mu.log ; child log path, use NONE for none; default AUTO  
+;logfile_maxbytes=1MB ; max # logfile bytes b4 rotation (default 50MB)  
+;logfile_backups=10 ; # of logfile backups (default 10)  
+```  
 
 
