@@ -71,7 +71,7 @@ cp config.json user-config.json
 ```  
 pip install --upgrade pip
 yum install epel-release -y
-yum isntall supervisord -y
+yum install supervisor -y
 ```  
 
 * 修改 `/etc/supervisord.conf` 添加如下内容  
