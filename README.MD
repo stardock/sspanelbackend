@@ -131,12 +131,6 @@ minprocs=200                ; (min. avail process descriptors;default 200)
 ;environment=KEY=value       ; (key value pairs to add to environment)  
 ;strip_ansi=false            ; (strip ansi escape codes in logs; def. false)  
   
-; the below section must remain in the config file for RPC  
-; (supervisorctl/web interface) to work, additional interfaces may be  
-; added by defining them in separate rpcinterface: sections  
-[rpcinterface:supervisor]  
-supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface  
-  
 [supervisorctl]  
 serverurl=unix:///var/run/supervisor/supervisor.sock ; use a unix:// URL  for a unix socket  
 ;serverurl=http://127.0.0.1:9001 ; use an http:// url to specify an inet socket  
