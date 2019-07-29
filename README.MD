@@ -64,7 +64,19 @@ cp config.json user-config.json
   `python server.py`  
   测试一下，应该就可以用看到相应用户数据了。  
   ctrl + c退出即可  
+  
+## 添加自动运行  
+  ```  
+  cp ssr.service /etc/systemd/system/ssr.service  
+  systemctl daemond-reload  
+  systemctl start ssr  
+  systemctl enable ssr  
+  ```  
+  * 查看运行状态  
+  `systemctl status ssr`  
 
+如下代码弃用
+~~~  
 ## 添加守护进程自动运行  
 
 * 安装必备软件  
@@ -154,5 +166,6 @@ systemctl enable supervisord
 `supervisorctl status mu`  
   * 如下显示说明成功  
   `mu                               RUNNING   pid 3254, uptime 4 days, 0:42:33`  
+  ~~~  
   
 
