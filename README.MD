@@ -68,7 +68,7 @@ cp config.json user-config.json
 ## 添加自动运行  
   ```  
   cp ssr.service /etc/systemd/system/ssr.service  
-  systemctl daemond-reload  
+  systemctl daemon-reload  
   systemctl start ssr  
   systemctl enable ssr  
   ```  
