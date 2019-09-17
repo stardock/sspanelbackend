@@ -8,7 +8,7 @@
 
 * 安装基本组件  
 ```  
-yum -y install python-setuptools && easy_install pip && pip install cymysql speedtest-cli && yum install git
+yum -y install python-setuptools git && easy_install pip && pip install cymysql speedtest-cli
 yum -y groupinstall "Development Tools"
 ```  
 * 添加CHACHA20加密方式支持  
