@@ -12,7 +12,7 @@ yum -y install python-setuptools && easy_install pip && pip install cymysql spee
 ```  
 * 添加CHACHA20加密方式支持  
 ```
-yum -y groupinstall "Development Tools" && yum -y install libsodium  
+yum -y groupinstall "Development Tools" && yum -y install epel-release && yum -y install libsodium  
 ```  
 
 * 下载程序源代码  
