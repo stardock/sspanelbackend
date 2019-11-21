@@ -18,11 +18,10 @@ yum -y install epel-release && yum -y install libsodium
 
 * 下载程序源代码  
 ```  
-git clone -b manyuser https://github.com/NimaQu/shadowsocks
+mkdir shadowsocks && cd shadowsocks && git clone -b manyuser https://github.com/Anankke/shadowsocks-mod tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 yum -y install python-devel  
 yum -y install libffi-devel  
 yum -y install openssl-devel  
-cd shadowsocks  
 pip install -r requirements.txt  
 cp apiconfig.py userapiconfig.py  
 cp config.json user-config.json  
