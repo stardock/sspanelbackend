@@ -4,6 +4,7 @@
 
 * 已经完成前端配置  
 * last checkout a3ed560  
+* last working checkout is 42594d3 published on  Apr 12, 2020. The py2 is going to be retired.
 
 ## 安装基本组件和SSR后端  
 
