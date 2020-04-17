@@ -2,6 +2,7 @@
 
 ## 准备阶段  
 
+* cat /etc/redhat-release 确认是centos8  
 * 已经完成前端配置  
 * last checkout a3ed560  
 * last working checkout is 42594d3 which published on  Apr 12, 2020. The py2 is going to be retired.
@@ -10,7 +11,7 @@
 
 * 安装基本组件  
 ```  
-yum -y install python-setuptools git && easy_install pip && pip install cymysql speedtest-cli
+yum -y install python3 python3-setuptools git && pip3 install cymysql speedtest-cli
 yum -y groupinstall "Development Tools"
 ```  
 * 添加CHACHA20加密方式支持  
