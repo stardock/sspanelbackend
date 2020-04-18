@@ -77,4 +77,23 @@ cp config.json user-config.json
   * 查看运行状态  
   `systemctl status ssr`  
 
+## 额外1：以普通用户运行并监听<1024特权端口
 
+```  
+cd ~
+useradd ssuser
+cp -r shadowsocks /home/ssuser/
+setcap CAP_NET_BIND_SERVICE=+eip  /usr/bin/python2.7
+touch /etc/hosts.allow
+chmod 777 /etc/hosts.allow
+touch /etc/hosts.deny
+chmod 777 /etc/hosts.deny
+ll /etc/hosts*
+cd /home/ssuser/shadowsocks
+git reset --hard
+git pull
+git reset --hard
+```  
+
+修改启动文件使用ssuser运行  
+`vi /etc/systemd/system/ssr.service`  
