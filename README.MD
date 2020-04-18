@@ -4,8 +4,7 @@
 
 * cat /etc/redhat-release 确认是centos8  
 * 已经完成前端配置  
-* last checkout a3ed560  
-* last working checkout is 42594d3 which published on  Apr 12, 2020. The py2 is going to be retired.
+* 默认使用Python3
 
 ## 安装基本组件和SSR后端  
 
@@ -22,10 +21,10 @@ yum -y install epel-release && yum -y install libsodium
 * 下载程序源代码  
 ```  
 mkdir shadowsocks && cd shadowsocks && git clone -b manyuser https://github.com/Anankke/shadowsocks-mod tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
-yum -y install python-devel  
+yum -y install python3-devel  
 yum -y install libffi-devel  
 yum -y install openssl-devel  
-pip install -r requirements.txt  
+pip3 install -r requirements.txt  
 cp apiconfig.py userapiconfig.py  
 cp config.json user-config.json  
 ```  
@@ -64,7 +63,7 @@ cp config.json user-config.json
 
 
 ## 测试运行
-  `python server.py`  
+  `python3 server.py`  
   测试一下，应该就可以用看到相应用户数据了。  
   ctrl + c退出即可  
   
@@ -75,6 +74,8 @@ cp config.json user-config.json
   systemctl start ssr  
   systemctl enable ssr  
   ```  
+  注意：需要修改service文件，使用Python3
+  
   * 查看运行状态  
   `systemctl status ssr`  
 
