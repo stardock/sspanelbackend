@@ -18,7 +18,7 @@ yum -y groupinstall "Development Tools"
 yum -y install epel-release && yum -y install libsodium
 ```  
 
-* 下载程序源代码  
+* 下载程序源代码 (a3ed560)  
 ```  
 mkdir shadowsocks && cd shadowsocks && git clone -b manyuser https://github.com/Anankke/shadowsocks-mod tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 yum -y install python-devel  
